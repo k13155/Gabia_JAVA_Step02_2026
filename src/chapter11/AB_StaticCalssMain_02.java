@@ -1,0 +1,36 @@
+package chapter11;
+
+import javax.swing.JOptionPane;
+
+// AA_NonStatic_01과 비교
+class Out2{
+	
+	// 멤버변수
+	static int a = 1; // 정적변수로 모든 객체가 공유
+	int b;
+	
+	public static class In{
+		
+		String Infun() {
+			return a + "번째 static 내주 클래스";
+			
+		}// Infun
+		
+	}// In class
+	
+}
+
+public class AB_StaticCalssMain_02 {
+
+	public static void main(String[] args) {
+		
+		// static 클래스는 직접 접근이 가능(new를 한번만 만들어도 된다)
+		Out2.In obj1 = new Out2.In();
+		
+		// 내부 클래스 메서드
+		String str = obj1.Infun();
+		JOptionPane.showMessageDialog(null, str + "\n Success");
+
+	}
+
+}

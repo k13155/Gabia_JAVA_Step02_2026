@@ -1,0 +1,25 @@
+package chapter14.queue;
+
+public class QueueMain_01 {
+
+	public static void main(String[] args) {
+
+		MyQueue queue = new MyQueue();
+
+		queue.enQueue("A"); // 추가 메서드
+		queue.enQueue("B");
+		queue.enQueue("C");
+
+		System.out.println(queue);
+
+		System.out.println(queue.deQueue());
+		System.out.println(queue.deQueue());
+		System.out.println(queue.deQueue());
+
+		System.out.println(queue);
+		
+		
+
+	}
+
+}
